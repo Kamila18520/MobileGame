@@ -19,6 +19,7 @@ public class MenuRunnerController : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float speed = 5f;
     private int currentPointIndex = 1;
     private bool fall = false;
+    private string currentTrigger = string.Empty;
     [SerializeField] float fallTime = 2;
 
     void Start()
@@ -28,30 +29,33 @@ public class MenuRunnerController : MonoBehaviour, IPointerClickHandler
         for (int i = 0; i < Points.childCount; i++)
         {
             tourPoints[i] = new Vector3(Points.GetChild(i).position.x, Points.GetChild(i).position.y, 0);
-
         }
 
         runner.position = tourPoints[0];
-
     }
 
 
     void Update()
     {
-        if (!fall)
-        {
-            if (Vector3.Distance(runner.position, tourPoints[currentPointIndex]) < 0.1f)
-            {
-                currentPointIndex = (currentPointIndex + 1) % tourPoints.Length;
-                MoveToNextPoint();
-            }
-            else
-            {
-                MoveToNextPoint();
-            }
+        RunLogic();
+    }
 
+    private void RunLogic()
+    {
+        if (fall)
+        {
+            return;
         }
-        
+
+        if (Vector3.Distance(runner.position, tourPoints[currentPointIndex]) < 0.1f)
+        {
+            currentPointIndex = (currentPointIndex + 1) % tourPoints.Length;
+            MoveToNextPoint();
+        }
+        else
+        {
+            MoveToNextPoint();
+        }
     }
 
     void MoveToNextPoint()
@@ -59,35 +63,32 @@ public class MenuRunnerController : MonoBehaviour, IPointerClickHandler
         Vector3 targetPosition = tourPoints[currentPointIndex];
         runner.position = Vector3.MoveTowards(runner.position, targetPosition, speed * Time.deltaTime);
         SetAnimation();
-
     }
 
-    private string currentTrigger;
-    private void SetAnimation()
+    
+    private string SetAnimation()
     {
-        if (currentPointIndex >= 1 && currentPointIndex <= 3)
+        switch (currentPointIndex)
         {
-            runnerAnim.SetTrigger("RunUp");
-            currentTrigger = "RunUp";
+            case int index when (index >= 1 && index <= 3):
+                runnerAnim.SetTrigger("RunUp");
+                currentTrigger = "RunUp";
+                break;
+            case int index when (index == 4 || index == 5):
+                runnerAnim.SetTrigger("RunLeft");
+                currentTrigger = "RunLeft";
+                break;
+            case int index when (index >= 6 && index <= 8):
+                runnerAnim.SetTrigger("RunDown");
+                currentTrigger = "RunDown";
+                break;
+            default:
+                runnerAnim.SetTrigger("RunRight");
+                currentTrigger = "RunRight";
+                break;
         }
-        else if (currentPointIndex == 4 || currentPointIndex == 5)
-        {
-            runnerAnim.SetTrigger("RunLeft");
-            currentTrigger = "RunLeft";
 
-        }
-        else if (currentPointIndex >= 6 && currentPointIndex <= 8)
-        {
-            runnerAnim.SetTrigger("RunDown");
-            currentTrigger = "RunDown";
-
-        }
-        else
-        {
-            runnerAnim.SetTrigger("RunRight");
-            currentTrigger = "RunRight";
-
-        }
+        return currentTrigger;
     }
 
     public void OnPointerClick(PointerEventData eventData)
