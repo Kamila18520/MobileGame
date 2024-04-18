@@ -7,7 +7,9 @@ public class PanelAnim : MonoBehaviour
     [SerializeField] GameObject animatedPanel;
     [Header("Parameters")]
     [SerializeField] float duration = 0.5f;
-    private float minScale = 0.9f;
+    [SerializeField] private float minScale = 0.9f;
+
+
 
     public void EntryAnimationPanel()
     {
