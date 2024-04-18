@@ -5,8 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/Kamila/Gymnastic.unity
+    guid: 0b8f26cba1b99ba4eb3455444e46df62
+  - enabled: 1
+    path: Assets/Scenes/Kamila/Shot throw.unity
+    guid: c691389f16535944e9b01f0863c56667
+  - enabled: 1
+    path: Assets/Scenes/Kamila/Swimming.unity
+    guid: a2b46d15e6a1fdb4f924cd21be76cd07
+  - enabled: 1
+    path: Assets/Scenes/Kamila/Weightlifting.unity
+    guid: 00f77fdeb7b59504bb85bab726149961
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2a08cc943c94d74409f4dad7086a190f, type: 2}
