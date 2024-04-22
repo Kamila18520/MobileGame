@@ -382,6 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2853951034634280499}
   - component: {fileID: 3609841813654235660}
+  - component: {fileID: 5906394253224629380}
   m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
@@ -438,6 +439,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &5906394253224629380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240611385242911461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &3334218277868517902
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 0
+  m_ShowMaskGraphic: 1
 --- !u!1 &4099914312519096241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1068,7 @@ MonoBehaviour:
   - {fileID: 6332158320038393957}
   - {fileID: 2847037481036603097}
   duration: 1
+  gamesParent: {fileID: 4099914312519096241}
 --- !u!114 &7029036399838314486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1066,21 +1081,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb56326c6b4bc049a694ca342bff4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pressedCard: 0
   levelsHandler:
   - Discipline: Swimming
     CreatedBy: Kamila
+    pressed: 0
     Scene: {fileID: 102900000, guid: a2b46d15e6a1fdb4f924cd21be76cd07, type: 3}
     Button: {fileID: 2537589159764786845}
   - Discipline: Gymnastic
     CreatedBy: Kamila
+    pressed: 0
     Scene: {fileID: 102900000, guid: 0b8f26cba1b99ba4eb3455444e46df62, type: 3}
     Button: {fileID: 5878707359725944381}
   - Discipline: Shot throw
     CreatedBy: Kamila
+    pressed: 0
     Scene: {fileID: 102900000, guid: c691389f16535944e9b01f0863c56667, type: 3}
     Button: {fileID: 8761486987909795413}
   - Discipline: Weightlifting
     CreatedBy: Kamila
+    pressed: 0
     Scene: {fileID: 102900000, guid: 00f77fdeb7b59504bb85bab726149961, type: 3}
     Button: {fileID: 7269103802103794922}
 --- !u!1 &4583681907457874751
@@ -1408,7 +1428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1650,9 +1670,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6687493585847033299}
-        m_TargetAssemblyTypeName: PanelAnim, Assembly-CSharp
-        m_MethodName: ExitAnimationPanel
+      - m_Target: {fileID: 9021693492418226383}
+        m_TargetAssemblyTypeName: PlayAnimations, Assembly-CSharp
+        m_MethodName: ExitRaceAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2060,7 +2080,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3761944002139068618}
   m_HandleRect: {fileID: 8032050744827013741}
   m_Direction: 0
-  m_Value: 0.000000041438764
+  m_Value: 0.000000041438767
   m_Size: 0.25704923
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5589,15 +5609,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2002046968959848012, guid: f4c5ca4f2b34be244880df7a359c11ee, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2002046968959848012, guid: f4c5ca4f2b34be244880df7a359c11ee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2002046968959848012, guid: f4c5ca4f2b34be244880df7a359c11ee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2002046968959848012, guid: f4c5ca4f2b34be244880df7a359c11ee, type: 3}
       propertyPath: m_AnchoredPosition.x
