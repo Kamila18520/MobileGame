@@ -11,6 +11,11 @@ public class BubbleController : MonoBehaviour, IPointerClickHandler
     [Header("TEST dont lose")]
     public bool TEST = false;
 
+    [Header("Color Change")]
+    public Color startColor;
+    public Color endColor;
+    private Image image;
+
     [Header("Bubble")]
     [SerializeField] float lifeTime = 4;
     [SerializeField] float time;
@@ -22,6 +27,8 @@ public class BubbleController : MonoBehaviour, IPointerClickHandler
 
     private void Awake()
     {
+        image = GetComponent<Image>();
+        image.color = startColor;
         animator = GetComponent<Animator>();
         gameObject.transform.localScale = Vector3.zero;
         GameobjectScale();
@@ -37,6 +44,10 @@ public class BubbleController : MonoBehaviour, IPointerClickHandler
     {
         time += Time.deltaTime;
 
+
+            ChangeColor();
+
+
         if (time >= lifeTime && !clicked)
         {
             if (!TEST)
@@ -47,6 +58,16 @@ public class BubbleController : MonoBehaviour, IPointerClickHandler
 
             Destroy(gameObject);
         }
+    }
+
+    private void ChangeColor()
+    {
+        float progress = Mathf.Clamp01(time / lifeTime);
+
+        Color lerpedColor = Color.Lerp(startColor, endColor, progress);
+
+        image.color = lerpedColor;
+
     }
 
 

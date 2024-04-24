@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e953b640d3a7a2a438df313aa7e1c8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instructionVariable: {fileID: 11400000, guid: 5e1c3fab3b9f0064e8a3bccaa47fd63b, type: 2}
+  instructionVariable: {fileID: 0}
   stopSctipts:
     m_PersistentCalls:
       m_Calls:

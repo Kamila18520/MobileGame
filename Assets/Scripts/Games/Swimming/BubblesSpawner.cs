@@ -13,7 +13,6 @@ public class BubblesSpawner : MonoBehaviour
 
     [Header("Time")]
     [SerializeField] PointsController pointsController;
-    [SerializeField] float actualTime;
     [Range(0f, 1f)]
     [SerializeField] float percent;
 
@@ -43,9 +42,7 @@ public class BubblesSpawner : MonoBehaviour
 
     private void Update()
     {
-        actualTime = pointsController.actualTime;
         percent = pointsController.percent;
-
 
 
         if (actualSpeed > maxSpeed)
@@ -66,7 +63,6 @@ public class BubblesSpawner : MonoBehaviour
         GameObject bubble = Instantiate(bubblePrefab, transform);
         bubble.GetComponent<BubbleController>().TEST = TEST;
         bubble.GetComponent<GameOverPanel>().gameOverPanel = gameObject.GetComponent<GameOverPanel>().gameOverPanel;
-        bubble.GetComponent<GameOverPanel>().textMeshProUGUI = gameObject.GetComponent<GameOverPanel>().textMeshProUGUI;
 
         RandomPosition(bubble);
     }

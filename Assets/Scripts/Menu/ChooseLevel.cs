@@ -9,39 +9,41 @@ using UnityEngine.SceneManagement;
 public class ChooseLevel : MonoBehaviour
 {
     [SerializeField] bool pressedCard = false;
+    [SerializeField] float panelAnimDuration=1;
 
     public List<SceneLoader> levelsHandler = new List<SceneLoader>();
 
     private void Awake()
     {
+        pressedCard = false;
+  
         foreach (SceneLoader loader in levelsHandler)
         {
-            loader.Button.onClick.AddListener(() => LoadScene(loader.Scene, loader.pressed));
+            loader.Button.onClick.AddListener(() => LoadScene(loader.Scene , loader.panelAnim));
+            loader.panelAnim = loader.Button.gameObject.GetComponent<PanelAnim>();
+
+            loader.Button.gameObject.GetComponent<PanelAnim>().duration = panelAnimDuration ;
         }
     }
 
-    void OnClick()
+
+    void LoadScene(UnityEngine.Object scene, PanelAnim panelAnim)
     {
+        if (!pressedCard)
+        {
+            panelAnim.EntryAnimationPanel();
+            pressedCard = true;
+            Debug.Log("Load scene: " + scene.name);
+            StartCoroutine(Wait(scene));
+
+        }
 
     }
 
-    void EnableCard()
+    IEnumerator Wait(UnityEngine.Object scene)
     {
-
-    }
-
-    void DisableCard()
-    {
-
-    }
-
-
-    void LoadScene(UnityEngine.Object scene, bool pressed)
-    {
-
-                Debug.Log("£adujê scenê: " + scene.name);
-                SceneManager.LoadScene(scene.name);
-
+        yield return new WaitForSeconds(panelAnimDuration);
+        SceneManager.LoadScene(scene.name);
     }
 
 }
@@ -51,12 +53,13 @@ public class ChooseLevel : MonoBehaviour
 
 public class SceneLoader
 {
-
+    public PanelAnim panelAnim;
     public string Discipline;
     public string CreatedBy;
-    public bool pressed;
     public UnityEngine.Object Scene;
     public Button Button; 
+
+    
 
 
 }
