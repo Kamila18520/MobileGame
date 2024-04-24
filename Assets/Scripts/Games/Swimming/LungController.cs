@@ -8,7 +8,6 @@ public class LungController : MonoBehaviour
 {
     [Header("Time")]
     [SerializeField] PointsController pointsController;
-    [SerializeField] float actualTime;
     [Range(0f, 1f)]
     [SerializeField] float percent;
 
@@ -37,9 +36,7 @@ public class LungController : MonoBehaviour
 
     private void Update()
     {
-        actualTime = pointsController.actualTime;
         percent = pointsController.percent;
-
 
 
         lungsValue = lungs[0].GetComponent<Slider>().value;

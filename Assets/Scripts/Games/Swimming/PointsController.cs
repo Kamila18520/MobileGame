@@ -12,7 +12,7 @@ public class PointsController : MonoBehaviour
     public float percent;
 
     [Header("Points")]
-    [SerializeField] int points;
+    public int points;
     [SerializeField] TextMeshProUGUI pointsText;
     [SerializeField] float pointsMultiplier = 5f;
 
@@ -32,4 +32,6 @@ public class PointsController : MonoBehaviour
         actualTime += Time.deltaTime;
         percent = (actualTime / timeToMaxSpeed);
     }
+
+
 }

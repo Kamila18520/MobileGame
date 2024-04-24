@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f74fa4d97654d42845ca53d921381f, type: 3}
   m_Name: SwimmingInstruction
   m_EditorClassIdentifier: 
-  TEST_donotdisable: 1
-  FirstGame: 1
+  TEST_donotdisable: 0
+  FirstGame: 0
