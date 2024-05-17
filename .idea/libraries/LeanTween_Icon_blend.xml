@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LeanTween-Icon.blend">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Assets/LeanTween/Examples/Models/LeanTween-Icon.blend.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
