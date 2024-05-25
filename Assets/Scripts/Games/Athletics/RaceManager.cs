@@ -6,6 +6,7 @@ public class RaceManager : MonoBehaviour
     public TMP_Text timerText; // Referencja do TMP_Text do wyœwietlania czasu
     private float startTime;
     private bool raceFinished = false;
+    public EndScreenManager endScreenManager; // Referencja do EndScreenManager
 
     void Start()
     {
@@ -26,7 +27,11 @@ public class RaceManager : MonoBehaviour
     public void FinishRace()
     {
         raceFinished = true;
+        float finalTime = Time.time - startTime;
+        endScreenManager.ShowResults(finalTime);
     }
 }
+
+
 
 
