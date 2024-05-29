@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -67.13693, y: 0}
+  m_AnchoredPosition: {x: -67.1369, y: 0}
   m_SizeDelta: {x: -634.28, y: 46.92}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5091374690095781289
@@ -1631,6 +1631,7 @@ MonoBehaviour:
   animatedPanel: {fileID: 7032556164016645151}
   duration: 1
   minScale: 0.9
+  maxScale: 1
 --- !u!114 &2600998697587756797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,6 +1648,7 @@ MonoBehaviour:
   animatedPanel: {fileID: 8032154541663604180}
   duration: 1
   minScale: 0.9
+  maxScale: 1
 --- !u!1 &5015734553275508150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,9 +2282,9 @@ RectTransform:
   - {fileID: 7897479269544464358}
   m_Father: {fileID: 5861015275255257174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 254.80006, y: -235.47874}
   m_SizeDelta: {x: 509.60013, y: 470.9575}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7058014523313578962
@@ -2524,9 +2526,9 @@ RectTransform:
   - {fileID: 6222768629164196592}
   m_Father: {fileID: 5861015275255257174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 764.4002, y: -235.47874}
   m_SizeDelta: {x: 509.60013, y: 470.9575}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8547819013710794905
@@ -2743,7 +2745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013193603739930, guid: 56a9e9dbebdb0e24baa42d3bdb52f4fe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4068400624925111673, guid: 56a9e9dbebdb0e24baa42d3bdb52f4fe, type: 3}
       propertyPath: instructionVariable
