@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
+    path: Assets/Scenes/zosia/Diving.unity
+    guid: e9a1f59e956b9ba48b783dcf840d0c08
+  - enabled: 1
     path: Assets/Scenes/Kamila/Gymnastic.unity
     guid: 0b8f26cba1b99ba4eb3455444e46df62
   - enabled: 1
