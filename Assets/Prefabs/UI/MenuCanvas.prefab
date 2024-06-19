@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.7780747
+  m_AspectRatio: 2.1641026
 --- !u!1 &1892489344746690019
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,9 +261,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be769b67816c4c740b472140d5da7671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayOnAwake: 0
   animatedPanel: {fileID: 986238355798351441}
   duration: 0.5
   minScale: 0.9
+  maxScale: 1
 --- !u!1 &1998060267178997501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,27 +1084,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressedCard: 0
+  panelAnimDuration: 1
   levelsHandler:
-  - Discipline: Swimming
+  - panelAnim: {fileID: 0}
+    Discipline: Swimming
     CreatedBy: Kamila
-    pressed: 0
     Scene: {fileID: 102900000, guid: a2b46d15e6a1fdb4f924cd21be76cd07, type: 3}
     Button: {fileID: 2537589159764786845}
-  - Discipline: Gymnastic
+  - panelAnim: {fileID: 0}
+    Discipline: Gymnastic
     CreatedBy: Kamila
-    pressed: 0
     Scene: {fileID: 102900000, guid: 0b8f26cba1b99ba4eb3455444e46df62, type: 3}
     Button: {fileID: 5878707359725944381}
-  - Discipline: Shot throw
+  - panelAnim: {fileID: 0}
+    Discipline: Shot throw
     CreatedBy: Kamila
-    pressed: 0
     Scene: {fileID: 102900000, guid: c691389f16535944e9b01f0863c56667, type: 3}
     Button: {fileID: 8761486987909795413}
-  - Discipline: Weightlifting
+  - panelAnim: {fileID: 0}
+    Discipline: Weightlifting
     CreatedBy: Kamila
-    pressed: 0
     Scene: {fileID: 102900000, guid: 00f77fdeb7b59504bb85bab726149961, type: 3}
     Button: {fileID: 7269103802103794922}
+  - panelAnim: {fileID: 0}
+    Discipline: Diving
+    CreatedBy: Zosia
+    Scene: {fileID: 102900000, guid: e9a1f59e956b9ba48b783dcf840d0c08, type: 3}
+    Button: {fileID: 7131991513552160993}
 --- !u!1 &4583681907457874751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,7 +2088,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3761944002139068618}
   m_HandleRect: {fileID: 8032050744827013741}
   m_Direction: 0
-  m_Value: 0.000000041438767
+  m_Value: 0.000000041438764
   m_Size: 0.25704923
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2318,9 +2326,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be769b67816c4c740b472140d5da7671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayOnAwake: 0
   animatedPanel: {fileID: 753989007880346234}
   duration: 0.5
   minScale: 0.9
+  maxScale: 1
 --- !u!1 &8669253948623737622
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,9 +3421,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be769b67816c4c740b472140d5da7671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayOnAwake: 0
   animatedPanel: {fileID: 1086361841809356160}
   duration: 0.5
   minScale: 0.9
+  maxScale: 1
 --- !u!114 &7857520086867967714 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8671324831004662664, guid: 4d16222603be6364a893d18d65912a83, type: 3}
@@ -4024,7 +4036,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611595528505070927, guid: f4c5ca4f2b34be244880df7a359c11ee, type: 3}
       propertyPath: m_Name
-      value: Olympic discipline Card (11)
+      value: Olympic discipline Card [diving]
       objectReference: {fileID: 0}
     - target: {fileID: 2002046968959848012, guid: f4c5ca4f2b34be244880df7a359c11ee, type: 3}
       propertyPath: m_Pivot.x
@@ -4156,6 +4168,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2002046968959848012, guid: f4c5ca4f2b34be244880df7a359c11ee, type: 3}
   m_PrefabInstance: {fileID: 2592502173803327635}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7131991513552160993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4684735936449820786, guid: f4c5ca4f2b34be244880df7a359c11ee, type: 3}
+  m_PrefabInstance: {fileID: 2592502173803327635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2729900344888767640
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class Test : MonoBehaviour
 {
     public TimerScript timerRef;
     public JumperController controllerRef;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,4 +26,5 @@ public class Test : MonoBehaviour
             controllerRef.BadJump();
         }
     }
+
 }
