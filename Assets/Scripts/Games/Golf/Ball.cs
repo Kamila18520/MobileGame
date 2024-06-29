@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AdaptivePerformance.VisualScripting;
 
 public class Ball : MonoBehaviour
 {
-    [Header("Referances")]
+    [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private LineRenderer lr;
     [SerializeField] private GameObject goalFx;
@@ -15,8 +14,15 @@ public class Ball : MonoBehaviour
     [SerializeField] private float power = 2f;
     [SerializeField] private float maxGoalSpeed = 4f;
 
-    private bool isDraging;
+    private bool isDragging;
     private bool inHole;
+
+    private Vector3 initialPosition;
+
+    private void Start()
+    {
+        initialPosition = transform.position; // Zapamiêtaj pocz¹tkow¹ pozycjê pi³ki
+    }
 
     private void Update()
     {
@@ -29,17 +35,17 @@ public class Ball : MonoBehaviour
         float distance = Vector2.Distance(transform.position, inputPos);
 
         if (Input.GetMouseButtonDown(0) && distance <= 0.5f) DragStart();
-        if (Input.GetMouseButton(0) && isDraging) DragChange(inputPos);
-        if (Input.GetMouseButtonUp(0) && isDraging) DragRelease(inputPos);
+        if (Input.GetMouseButton(0) && isDragging) DragChange(inputPos);
+        if (Input.GetMouseButtonUp(0) && isDragging) DragRelease(inputPos);
     }
 
     private void DragStart()
     {
-        isDraging = true;
+        isDragging = true;
         lr.positionCount = 2;
     }
 
-    private void DragChange(Vector2 pos) 
+    private void DragChange(Vector2 pos)
     {
         Vector2 dir = (Vector2)transform.position - pos;
 
@@ -49,17 +55,17 @@ public class Ball : MonoBehaviour
 
     private void DragRelease(Vector2 pos)
     {
-        float distance = Vector2.Distance((Vector2)transform.position,pos);
-        isDraging = false;
+        float distance = Vector2.Distance((Vector2)transform.position, pos);
+        isDragging = false;
         lr.positionCount = 0;
 
-        if (distance < 1f) {
+        if (distance < 1f)
+        {
             return;
         }
 
         Vector2 dir = (Vector2)transform.position - pos;
-        rb.velocity= Vector2.ClampMagnitude (dir * power, maxPower);
-
+        rb.velocity = Vector2.ClampMagnitude(dir * power, maxPower);
     }
 
     private void CheckWinState()
@@ -71,19 +77,37 @@ public class Ball : MonoBehaviour
             inHole = true;
 
             rb.velocity = Vector2.zero;
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); // Deaktywuj pi³kê po trafieniu do dziurki
 
             GameObject fx = Instantiate(goalFx, transform.position, Quaternion.identity);
             Destroy(fx, 2f);
+
+            // Resetowanie pi³ki po pewnym czasie (np. po 2 sekundach)
+            Invoke("ResetBall", 2f);
         }
+    }
+
+    private void ResetBall()
+    {
+        transform.position = initialPosition; // Ustawienie pi³ki na pocz¹tkow¹ pozycjê
+        gameObject.SetActive(true); // Aktywuj pi³kê ponownie
+        inHole = false; // Ustaw flagê inHole na false
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Goal") CheckWinState();
+        if (other.CompareTag("Goal"))
+        {
+            CheckWinState();
+        }
     }
+
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "Goal") CheckWinState();
+        if (other.CompareTag("Goal"))
+        {
+            CheckWinState();
+        }
     }
 }
+
