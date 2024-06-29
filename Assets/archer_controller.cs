@@ -64,7 +64,6 @@ public class bowScript : MonoBehaviour
     {
 
         Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log(MousePos);
         Vector2 bowPos = bow.position;
 
         direction = MousePos - bowPos;
