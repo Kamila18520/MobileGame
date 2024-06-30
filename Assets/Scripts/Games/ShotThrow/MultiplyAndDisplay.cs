@@ -2,21 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MultiplyAndDisplay : MonoBehaviour
 {
     [SerializeField] AngleAndDistanceBetweenPoints script;
     public List<Range> m_Range = new List<Range>();
     public float multipler;
-    public float number2 = 5f;  // Druga liczba do pomno¿enia
+    public float number2 = 5f;  
     public string text;
-    public TextMeshProUGUI resultText; // Komponent TMP, gdzie wyœwietlany bêdzie wynik
+    public TextMeshProUGUI resultText; 
     public TextMeshProUGUI comentText;
+    public TextMeshProUGUI maxScoreText;
 
-    private float result; // Wynik mno¿enia
-    private float targetResult; // Docelowy wynik do wyœwietlenia
-    public float duration = 2f; // Czas, w którym ma byæ wyœwietlany wynik (w sekundach)
-    public AnimationCurve easingCurve; // Krzywa liniowa do kontrolowania prêdkoœci
+    private float result; 
+    private float targetResult; 
+    public float duration = 2f; 
+    public AnimationCurve easingCurve; 
+    public GamePointsHolder gamePointsHolder;
+
+    public UnityEvent ShowButtons;
 
     void Start()
     {
@@ -34,27 +39,27 @@ public class MultiplyAndDisplay : MonoBehaviour
             }
         }
 
-        result = multipler * number2; // Obliczenie wyniku mno¿enia
-        targetResult = result; // Przypisanie wyniku jako docelowego wyniku
+        result = multipler * number2; 
+        targetResult = result; 
         StartCoroutine(DisplayResult());
     }
 
     IEnumerator DisplayResult()
     {
         float timer = 0f;
-        float initialResult = 0f; // Pocz¹tkowy wynik (0)
-        float decimalThreshold = 1000f; // Próg, poni¿ej którego u¿ywamy liczby dziesiêtnej (w tym przypadku 3 miejsca po przecinku)
+        float initialResult = 0f; 
+        float decimalThreshold = 1000f; 
 
         while (timer < duration)
         {
             float progress = timer / duration;
-            float easedProgress = easingCurve.Evaluate(progress); // U¿ycie krzywej liniowej do obliczenia spowolnienia
+            float easedProgress = easingCurve.Evaluate(progress); 
 
             float currentResult = Mathf.Lerp(initialResult, targetResult, easedProgress);
 
             if (targetResult < decimalThreshold)
             {
-                resultText.text = currentResult.ToString("F2")+"m"; // Dwa miejsca po przecinku
+                resultText.text = currentResult.ToString("F2")+"m"; 
             }
             else
             {
@@ -65,10 +70,10 @@ public class MultiplyAndDisplay : MonoBehaviour
             yield return null;
         }
 
-        // Upewnienie siê, ¿e ostateczny wynik jest wyœwietlany dok³adnie
+      
         if (targetResult < decimalThreshold)
         {
-            resultText.text = targetResult.ToString("F2") + "m"; // Dwa miejsca po przecinku
+            resultText.text = targetResult.ToString("F2") + "m"; 
         }
         else
         {
@@ -76,6 +81,17 @@ public class MultiplyAndDisplay : MonoBehaviour
         }
 
         comentText.text = text;
+        ShowButtons.Invoke();
+        if (result > gamePointsHolder.maxScore)
+        {
+            maxScoreText.text = "New max score!";
+            gamePointsHolder.maxScore = result;
+        }
+        else
+        {
+            maxScoreText.text = "Your max score: " + result + "m";
+
+        }
     }
 
     [System.Serializable]

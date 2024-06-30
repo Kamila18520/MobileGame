@@ -9,11 +9,11 @@ using UnityEngine.Events;
 public class Timer : MonoBehaviour
 {
 
-    public Scrollbar timerScrollbar; // Referencja do UI Scrollbar
-    public TextMeshProUGUI timerText; // Opcjonalne: Referencja do UI Text, który wyœwietla pozosta³y czas
-    public float startTime = 60f; // Czas pocz¹tkowy w sekundach
+    public Scrollbar timerScrollbar; 
+    public TextMeshProUGUI timerText; 
+    public float startTime = 60f; 
 
-    private float currentTime; // Aktualny czas
+    private float currentTime; 
 
     public UnityEvent OnTimeEnd;
 
@@ -34,7 +34,6 @@ public class Timer : MonoBehaviour
     {
         while (currentTime > 0)
         {
-            // Odliczanie czasu
             currentTime -= Time.deltaTime;
             timerScrollbar.size = currentTime / startTime;
 
@@ -60,6 +59,5 @@ public class Timer : MonoBehaviour
     private void OnTimerEnd()
     {
         OnTimeEnd.Invoke();
-        Debug.Log("Timer skoñczy³ odliczanie.");
     }
 }

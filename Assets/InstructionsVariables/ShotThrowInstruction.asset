@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShotThrowInstruction
   m_EditorClassIdentifier: 
   TEST_donotdisable: 0
-  FirstGame: 1
+  FirstGame: 0
