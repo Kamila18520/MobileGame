@@ -26,16 +26,16 @@ public class Skateboarder : MonoBehaviour
     {
         if (leftButton.buttonPressed)
         {
-            animatorRef.SetBool("IsRidingRight", false);
-            animatorRef.SetBool("IsRidingLeft", true);
             rendererRef.flipX = true;
+            animatorRef.SetBool("IsRidingRight", false);
+            animatorRef.SetBool("IsRidingLeft", true); 
             Accelerate();
         }
         else if (rightButton.buttonPressed)
         {
+            rendererRef.flipX = false;
             animatorRef.SetBool("IsRidingRight", true);
             animatorRef.SetBool("IsRidingLeft", false);
-            rendererRef.flipX = false;
             Accelerate();
         }
         else
