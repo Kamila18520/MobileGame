@@ -1,23 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AngleAndDistanceBetweenPoints : MonoBehaviour
 {
-    public int fullCircles;
+    [Header("Transform")]
+
     public Transform filledCircle;
     public Transform ball;
     private Image circleImage;
+
+    [Header("Angle")]
     public float Angle;
 
-    private float TargetDistance = 25.0f;
+    [Header("Full Circles")]
+    public AudioSource ballSound;
+    public TextMeshProUGUI text;
+    public int fullCircles;
+
+    [HideInInspector]
+    public float TargetDistance = 25.0f;
     private float normalizedAngle;
     private float previousNormalizedAngle;
 
     private void Start()
     {
         fullCircles = 0;
+        text.text = fullCircles.ToString();
+
         circleImage = filledCircle.GetComponent<Image>();
         previousNormalizedAngle = 0f;
     }
@@ -57,11 +69,12 @@ public class AngleAndDistanceBetweenPoints : MonoBehaviour
             normalizedAngle += 1;
         }
 
-        // SprawdŸ, czy kulka przekroczy³a próg 0 lub 1, aby zliczyæ pe³ne ko³a
         if ((previousNormalizedAngle > 0.75f && normalizedAngle < 0.25f) ||
             (previousNormalizedAngle < 0.25f && normalizedAngle > 0.75f))
         {
             fullCircles++;
+            text.text = fullCircles.ToString();
+            ballSound.Play();
         }
 
         previousNormalizedAngle = normalizedAngle;
