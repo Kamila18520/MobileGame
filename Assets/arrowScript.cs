@@ -34,11 +34,33 @@ public class arrowScript : MonoBehaviour
         //    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         //}
     }
-
+/*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hasHit = true;
         rb.velocity = Vector3.zero;
         rb.isKinematic = false;
+    }
+*/
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        
+        // SprawdŸ, czy strza³a trafi³a w tarczê
+        if (collision.gameObject.CompareTag("Target"))
+        {
+            // Zatrzymaj ruch strza³y
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+
+            // Upewnij siê, ¿e strza³a nie bêdzie dalej reagowaæ na fizykê
+            rb.isKinematic = true;
+
+            // Opcjonalnie: Przypnij strza³ê do tarczy, aby porusza³a siê z ni¹
+            transform.parent = collision.transform;
+
+            // Dodatkowe efekty wizualne lub dŸwiêkowe
+            Debug.Log("Strza³a trafi³a w tarczê!");
+        }
     }
 }

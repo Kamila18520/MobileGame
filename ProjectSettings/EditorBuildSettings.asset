@@ -21,4 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Kamila/Weightlifting.unity
     guid: 00f77fdeb7b59504bb85bab726149961
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c19a4fbe28fee3d4f93098b83a31f010, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2a08cc943c94d74409f4dad7086a190f, type: 2}
