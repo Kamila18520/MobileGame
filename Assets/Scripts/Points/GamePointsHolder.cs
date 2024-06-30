@@ -6,5 +6,5 @@ using UnityEngine;
 
 public class GamePointsHolder : ScriptableObject
 {
-    public int maxScore;
+    public float maxScore;
 }

@@ -24,4 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Kamila/Weightlifting.unity
     guid: 00f77fdeb7b59504bb85bab726149961
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 898f28b6e499edc48b37bafe1d11a3fa, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: e7e8ee34dbbefb247ae03d6ec30fecd9, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: ad24f924b755ac643a819e8b845231f4, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2a08cc943c94d74409f4dad7086a190f, type: 2}
