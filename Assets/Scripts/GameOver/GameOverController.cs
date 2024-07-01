@@ -27,7 +27,7 @@ public class GameOverController : MonoBehaviour
         // zdobyte punkty podczas gry
         if (pointsManager.gameObject.GetComponent<PointsController>() != null)
         {
-            value = pointsManager.gameObject.GetComponent<PointsController>().points;
+            value = pointsManager.gameObject.GetComponent<PointsController>().GetPoints();
         }
         else
         {

@@ -67,35 +67,29 @@ public class arrowScript : MonoBehaviour
             if (collision.gameObject.CompareTag("Target"))
             {
                 transform.parent = collision.transform;
-                Debug.Log("Strza³a trafi³a w tarczê!");
+                //Debug.Log("Strza³a trafi³a w tarczê!");
 
-                // Dodaj punkty za trafienie w tarczê
-                if (ScoreManager.instance != null)
-                {
-                    ScoreManager.instance.AddScore(10); // Dodaj 10 punktów za trafienie w tarczê
-                }
+                PointsController.Instance.IncrementPoints(10); // Dodaj 10 punktów za trafienie w tarczê
+                return;
             }
 
             if (collision.gameObject.CompareTag("Ground"))
             {
                 transform.parent = collision.transform;
-                Debug.Log("Strza³a trafi³a w pod³ogê!");
+                //Debug.Log("Strza³a trafi³a w pod³ogê!");
 
                 // Odejmij punkty za nietrafienie w tarczê
-                if (ScoreManager.instance != null)
-                {
-                    ScoreManager.instance.SubtractScore(10); // Odejmij 10 punktów za nietrafienie w tarczê
-                }
+                PointsController.Instance.DeductPoints(10); // Odejmij 10 punktów za nietrafienie w tarczê
+                return;
             }
             if (collision.gameObject.CompareTag("Wall"))
             {
                 transform.parent = collision.transform;
-                Debug.Log("Strza³a przelecia³a");
+                //Debug.Log("Strza³a przelecia³a");
 
-                if (ScoreManager.instance != null)
-                {
-                    ScoreManager.instance.SubtractScore(10); // Odejmij 10 punktów za nietrafienie w tarczê
-                }
+
+                PointsController.Instance.DeductPoints(10); // Odejmij 10 punktów za nietrafienie w tarczê
+                return;
             }
         }
     }

@@ -7,7 +7,7 @@ public class TargetScript : MonoBehaviour
     public int scoreValue = 10;  // Wartoœæ punktowa za trafienie
     public AudioSource hitSound; // Referencja do AudioSource
     public ParticleSystem hitEffect; // Referencja do ParticleSystem
-
+    [SerializeField] private PointsController controllerRef;
     void Start()
     {
         // Pobierz AudioSource i ParticleSystem z obiektu
@@ -20,13 +20,11 @@ public class TargetScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Arrow"))
         {
             // Obs³uga trafienia
-            Debug.Log("Tarcza trafiona!");
+            //Debug.Log("Tarcza trafiona!");
 
-            // Dodanie punktów do ScoreManager
-            if (ScoreManager.instance != null)
-            {
-                ScoreManager.instance.AddScore(scoreValue);
-            }
+
+            controllerRef.IncrementPoints(scoreValue);
+
 
             // Odtworzenie dŸwiêku trafienia
             if (hitSound != null)
