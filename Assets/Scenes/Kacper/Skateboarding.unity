@@ -2400,6 +2400,7 @@ MonoBehaviour:
   controllerRef: {fileID: 1361103209}
   leftButton: {fileID: 533379294}
   rightButton: {fileID: 900790114}
+  gamePointsHolder: {fileID: 11400000, guid: 74ffed05a592b1f41a20f4aff21941ea, type: 2}
   flips: 0
 --- !u!1 &1602334750
 GameObject:
