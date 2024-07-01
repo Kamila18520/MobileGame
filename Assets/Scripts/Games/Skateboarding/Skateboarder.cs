@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Skateboarder : MonoBehaviour
 {
     [SerializeField] private Slider sliderRef;
+    [SerializeField] private PointsController controllerRef;
     [SerializeField] private MyButton leftButton;
     [SerializeField] private MyButton rightButton;
 
@@ -13,8 +14,8 @@ public class Skateboarder : MonoBehaviour
     private SpriteRenderer rendererRef;
     private float currentSpeed = 0f;
     private const float maxSpeed = 5f; // Adjust this value
-    private const float acceleration = 0.5f; // Adjust this value
-    private const float deceleration = 0.2f; // Adjust this value
+    private const float acceleration = 1.5f; // Adjust this value
+    private const float deceleration = 0.4f; // Adjust this value
 
     void Start()
     {
@@ -73,5 +74,6 @@ public class Skateboarder : MonoBehaviour
     {
         currentSpeed = 0f;
         flips++;
+        controllerRef.IncrementPoints(flips);
     }
 }

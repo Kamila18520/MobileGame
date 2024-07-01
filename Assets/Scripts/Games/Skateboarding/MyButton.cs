@@ -15,4 +15,10 @@ public class MyButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         buttonPressed = false;
     }
+
+    public void ResetButton()
+    {
+        buttonPressed = false;
+        CancelInvoke();
+    }    
 }
