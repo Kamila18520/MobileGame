@@ -1,0 +1,593 @@
+fileFormatVersion: 2
+guid: c1fd400e31e45df4fb3de15e2d015da4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_0
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 4261
+        width: 1188
+        height: 1142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac534d0a4ec8e60438bfd9076714c5ea
+      internalID: 183694079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_1
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 4281
+        width: 1241
+        height: 1103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e5949cb0eb2a14199f81f3372d1a63
+      internalID: -1609159018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_2
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 4274
+        width: 1354
+        height: 1116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f2f30d458ead440a2ab21228de9f46
+      internalID: -1997119954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_3
+      rect:
+        serializedVersion: 2
+        x: 4904
+        y: 4248
+        width: 1275
+        height: 1122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95e1922a7e930c469ab48b492fbbbb8
+      internalID: 428442427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_4
+      rect:
+        serializedVersion: 2
+        x: 6469
+        y: 4261
+        width: 892
+        height: 1076
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99852e119b89c2843a133bd04364f831
+      internalID: 835421207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_5
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 2762
+        width: 1235
+        height: 1228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5d57c1373f06944ae26d2f47a9e8cc
+      internalID: -820856709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_6
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 2828
+        width: 1387
+        height: 1156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a00ca7220fb19f4bbfae09edcd593b4
+      internalID: -1913045952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_7
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 2875
+        width: 1334
+        height: 1030
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ad5918d5d627e45a865634f0cd871a
+      internalID: -86489515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_8
+      rect:
+        serializedVersion: 2
+        x: 4891
+        y: 2861
+        width: 1314
+        height: 1090
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0e89b85ac32904da5ff873543bca9f
+      internalID: -10928280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_9
+      rect:
+        serializedVersion: 2
+        x: 6337
+        y: 2861
+        width: 1195
+        height: 1083
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39273a9ff68a9484ebb5805970d7057a
+      internalID: 871917897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_10
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1600
+        width: 1057
+        height: 971
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59270be679f5c2b4a85532e7a8067baa
+      internalID: 1841379838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_11
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 1561
+        width: 1202
+        height: 1050
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de067d1305930ed4d9120f58c00e4c8a
+      internalID: 1924769844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_12
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 1534
+        width: 1433
+        height: 1077
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0725e34c4b787244a8813d86ffa3e8f7
+      internalID: 68806233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_13
+      rect:
+        serializedVersion: 2
+        x: 4819
+        y: 1541
+        width: 1406
+        height: 1089
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f5cd255a7dfbe458d27c5cd989f3ae
+      internalID: 1527652648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_14
+      rect:
+        serializedVersion: 2
+        x: 6370
+        y: 1574
+        width: 1076
+        height: 1017
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f26e94fefa68e449b25a06372674998
+      internalID: -785647217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_15
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 207
+        width: 1261
+        height: 1116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ddec96bd7a00249b312ed5ed2e56e1
+      internalID: 1682532111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_16
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 220
+        width: 1334
+        height: 1097
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 229, y: 183, z: 256, w: 210}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79169553348274e4f9d28fd77de2a06a
+      internalID: 1829117116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_17
+      rect:
+        serializedVersion: 2
+        x: 3326
+        y: 253
+        width: 1301
+        height: 1057
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1371024d67e373a45959eb8b46c52a9a
+      internalID: -2435530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_18
+      rect:
+        serializedVersion: 2
+        x: 4951
+        y: 260
+        width: 1168
+        height: 1030
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334e90bd07a390e4e8b7a5dd70f8a816
+      internalID: 2129865270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_19
+      rect:
+        serializedVersion: 2
+        x: 6331
+        y: 273
+        width: 1142
+        height: 1050
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a351a9deb49cad478647a3702735f7e
+      internalID: -1074919408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_0: 183694079
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_1: -1609159018
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_10: 1841379838
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_11: 1924769844
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_12: 68806233
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_13: 1527652648
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_14: -785647217
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_15: 1682532111
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_16: 1829117116
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_17: -2435530
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_18: 2129865270
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_19: -1074919408
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_2: -1997119954
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_3: 428442427
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_4: 835421207
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_5: -820856709
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_6: -1913045952
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_7: -86489515
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_8: -10928280
+      vecteezy_set-of-grunge-paintbrush-ink-stroke-brush-vector-illustration_22302703_9: 871917897
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
