@@ -215,6 +215,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439945295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6296722390076356813, guid: 0b2f7c4d9eb6a754ab01692f2c8f2fc7, type: 3}
+  m_PrefabInstance: {fileID: 5788354888499467124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1839735485 &840094981 stripped
 Tilemap:
   m_CorrespondingSourceObject: {fileID: 6631774434698022188, guid: 8a53a55c1df56e9418708c2b8d078a59, type: 3}
@@ -303,12 +314,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2026162667}
   timerText: {fileID: 1978698437}
+  endGameText: {fileID: 439945295}
+  restartButton: {fileID: 1067728394}
+  menuButton: {fileID: 1445204597}
+  endGamePanel: {fileID: 1254024867}
   gameTime: 60
+--- !u!114 &1067728394 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3734076064203607815, guid: 0b2f7c4d9eb6a754ab01692f2c8f2fc7, type: 3}
+  m_PrefabInstance: {fileID: 5788354888499467124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1088294916 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1822405528618120183, guid: d0a78332c24217d44b23da93c5913373, type: 3}
   m_PrefabInstance: {fileID: 5860576257777418487}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1254024867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 240052582455447251, guid: 0b2f7c4d9eb6a754ab01692f2c8f2fc7, type: 3}
+  m_PrefabInstance: {fileID: 5788354888499467124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1445204597 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4212915803635027761, guid: 0b2f7c4d9eb6a754ab01692f2c8f2fc7, type: 3}
+  m_PrefabInstance: {fileID: 5788354888499467124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1897560250 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2032169257390772009, guid: 7effa0cdd511868408fd2d2bbbea9e26, type: 3}
@@ -365,6 +407,10 @@ PrefabInstance:
     - target: {fileID: 301349530398126929, guid: 0b2f7c4d9eb6a754ab01692f2c8f2fc7, type: 3}
       propertyPath: m_Name
       value: GolfMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 936737452830621436, guid: 0b2f7c4d9eb6a754ab01692f2c8f2fc7, type: 3}
+      propertyPath: m_Color.a
+      value: 0.45490196
       objectReference: {fileID: 0}
     - target: {fileID: 5965683834146752328, guid: 0b2f7c4d9eb6a754ab01692f2c8f2fc7, type: 3}
       propertyPath: m_Pivot.x

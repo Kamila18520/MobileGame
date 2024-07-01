@@ -9,6 +9,8 @@ public class Ball : MonoBehaviour
     [SerializeField] private LineRenderer lr;
     [SerializeField] private GameObject goalFx;
 
+    private GameManager gameManager; // Referencja do GameManager
+
     [Header("Attributes")]
     [SerializeField] private float maxPower = 10f;
     [SerializeField] private float power = 2f;
@@ -22,6 +24,7 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         initialPosition = transform.position; // Zapamiêtaj pocz¹tkow¹ pozycjê pi³ki
+        gameManager = FindObjectOfType<GameManager>(); // ZnajdŸ GameManager w scenie
     }
 
     private void Update()
@@ -79,6 +82,16 @@ public class Ball : MonoBehaviour
             rb.velocity = Vector2.zero;
             gameObject.SetActive(false); // Deaktywuj pi³kê po trafieniu do dziurki
 
+            if (gameManager != null)
+            {
+                gameManager.IncreaseScore(); // Zwiêksz score w GameManagerze
+                Debug.Log("Ball hit the goal. Score should increase."); // Dodanie logu debugowania
+            }
+            else
+            {
+                Debug.LogError("GameManager not found!"); // Dodanie logu debugowania b³êdu
+            }
+
             GameObject fx = Instantiate(goalFx, transform.position, Quaternion.identity);
             Destroy(fx, 2f);
 
@@ -110,4 +123,6 @@ public class Ball : MonoBehaviour
         }
     }
 }
+
+
 
