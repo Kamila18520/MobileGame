@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LeanTween.dll">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Assets/LeanTween/Framework/LeanTween.dll.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

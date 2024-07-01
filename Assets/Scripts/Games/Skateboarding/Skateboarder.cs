@@ -8,6 +8,7 @@ public class Skateboarder : MonoBehaviour
     [SerializeField] private PointsController controllerRef;
     [SerializeField] private MyButton leftButton;
     [SerializeField] private MyButton rightButton;
+    [SerializeField] private GamePointsHolder gamePointsHolder;
 
     public int flips = 0;
     private Animator animatorRef;
@@ -75,5 +76,10 @@ public class Skateboarder : MonoBehaviour
         currentSpeed = 0f;
         flips++;
         controllerRef.IncrementPoints(flips);
+
+        if(flips > gamePointsHolder.maxScore)
+        {
+            gamePointsHolder.UpdateMaxScore(flips);
+        }
     }
 }
