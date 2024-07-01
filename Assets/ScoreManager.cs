@@ -6,12 +6,12 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public TMP_Text scoreText;  // Referencja do UI Text, gdzie bêd¹ wyœwietlane punkty
+    public TMP_Text scoreText;  
     private int score = 0;
 
     void Awake()
     {
-        // Upewnij siê, ¿e tylko jedna instancja ScoreManager istnieje
+        
         if (instance == null)
         {
             instance = this;
@@ -30,6 +30,12 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
+        UpdateScoreText();
+    }
+
+    public void SubtractScore(int points)
+    {
+        score -= points;
         UpdateScoreText();
     }
 
