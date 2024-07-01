@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545917bba184e3b4dba08cb26b5f2b20, type: 3}
   m_Name: '[Swimming]MaxScore'
   m_EditorClassIdentifier: 
-  maxScore: 113
+  identifier: Swimming
+  maxScore: 0

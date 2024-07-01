@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
+    path: Assets/Scenes/zosia/Diving.unity
+    guid: e9a1f59e956b9ba48b783dcf840d0c08
+  - enabled: 0
     path: Assets/Scenes/Kamila/Gymnastic.unity
     guid: 0b8f26cba1b99ba4eb3455444e46df62
   - enabled: 1
@@ -17,9 +20,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kamila/Swimming.unity
     guid: a2b46d15e6a1fdb4f924cd21be76cd07
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kamila/Weightlifting.unity
     guid: 00f77fdeb7b59504bb85bab726149961
+  - enabled: 1
+    path: Assets/Scenes/Kacper/Skateboarding.unity
+    guid: 3a8faf6303092d34f804653793a49485
   m_configObjects:
-    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c19a4fbe28fee3d4f93098b83a31f010, type: 2}
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 898f28b6e499edc48b37bafe1d11a3fa, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: e7e8ee34dbbefb247ae03d6ec30fecd9, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: ad24f924b755ac643a819e8b845231f4, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2a08cc943c94d74409f4dad7086a190f, type: 2}

@@ -7,6 +7,7 @@ public class PlayAnimations : MonoBehaviour
     [Header("BG Race animation")]
     [SerializeField] GameObject[] race;
     [SerializeField] float duration = 0.5f;
+    [SerializeField] float reverseAnim = 0f;
 
     [Header("Games")]
     [SerializeField] GameObject gamesParent;
@@ -68,6 +69,11 @@ public class PlayAnimations : MonoBehaviour
 
     IEnumerator RaceAnim(Vector3 target, bool close)
     {
+        if(!entry)
+        {
+            yield return new WaitForSeconds(reverseAnim);
+        }
+
         foreach (GameObject r in race)
         {
             LeanTween.scale(r, new Vector3(target.x, 1, 1), duration)
