@@ -85,7 +85,7 @@ public class MultiplyAndDisplay : MonoBehaviour
         if (result > gamePointsHolder.maxScore)
         {
             maxScoreText.text = "New max score!";
-            gamePointsHolder.maxScore = result;
+            gamePointsHolder.UpdateMaxScore(result);
         }
         else
         {

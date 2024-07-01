@@ -31,7 +31,7 @@ public class GameOverController : MonoBehaviour
         {
             actualScore.text = "New max score!";
             maxScore.text = value.ToString();
-            gamePointsHolder.maxScore = value;
+            gamePointsHolder.UpdateMaxScore(value);
         }
         else
         {
