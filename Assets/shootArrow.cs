@@ -14,24 +14,26 @@ public class shootArrow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.touchCount > 0)
         {
-            Shoot();
-           
+            Touch touch = Input.GetTouch(0); // Pobierz pierwszy dotyk
+
+            if (touch.phase == TouchPhase.Began) // Jeœli dotyk rozpoczyna siê
+            {
+                Shoot();
+            }
         }
-        
     }
 
     void Shoot()
     {
-        GameObject ArrowIns = Instantiate(arrow,arrowSpawnPoint.position,arrowSpawnPoint.rotation);
+        GameObject ArrowIns = Instantiate(arrow, arrowSpawnPoint.position, arrowSpawnPoint.rotation);
         ArrowIns.GetComponent<Rigidbody2D>().velocity = ArrowIns.transform.up * LaunchForce;
     }
 }

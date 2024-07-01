@@ -45,7 +45,8 @@ public class GameTimer : MonoBehaviour
     }
     void EndGame()
     {
-      
+
+        timerText.text = "00:00";
         if (gameOverText != null)
         {
             gameOverText.gameObject.SetActive(true);
