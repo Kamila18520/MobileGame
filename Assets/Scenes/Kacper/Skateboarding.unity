@@ -980,7 +980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerScrollbar: {fileID: 717295109}
   timerText: {fileID: 1254314634}
-  startTime: 30
+  startTime: 10
   OnTimeEnd:
     m_PersistentCalls:
       m_Calls:
@@ -2137,7 +2137,7 @@ GameObject:
   - component: {fileID: 1361103207}
   - component: {fileID: 1361103209}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: points TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

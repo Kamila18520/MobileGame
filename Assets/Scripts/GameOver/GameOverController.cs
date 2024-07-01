@@ -19,19 +19,35 @@ public class GameOverController : MonoBehaviour
     [SerializeField] TextMeshProUGUI pointsManager;
     [SerializeField] GamePointsHolder gamePointsHolder;
 
-
     public UnityEvent stopGame;
+    int value;
 
-    private void Awake()
+    private void Start()
     {
-        //zdobyte pkt podczas gry
-        int value = pointsManager.gameObject.GetComponent<PointsController>().points;
+        // zdobyte punkty podczas gry
+        if (pointsManager.gameObject.GetComponent<PointsController>() != null)
+        {
+            value = pointsManager.gameObject.GetComponent<PointsController>().points;
+        }
+        else
+        {
+            if (float.TryParse(pointsManager.text, out float result))
+            {
+                value = Mathf.RoundToInt(result);
+                Debug.Log("Conversion successful: " + value);
+            }
+            else
+            {
+                Debug.LogError("Failed to convert string to float.");
+            }
+        }
 
-        if(NewMaxPoint(value))
+        if (NewMaxPoint(value))
         {
             actualScore.text = "New max score!";
             maxScore.text = value.ToString();
             gamePointsHolder.UpdateMaxScore(value);
+            Debug.Log("Workin?");
         }
         else
         {
@@ -39,7 +55,7 @@ public class GameOverController : MonoBehaviour
             maxScore.text = "Your max score: " + gamePointsHolder.maxScore.ToString();
         }
 
-        pointsManager.text =actualScore.text;
+        pointsManager.text = actualScore.text;
         stopGame.Invoke();
     }
 
@@ -52,7 +68,6 @@ public class GameOverController : MonoBehaviour
     {
         Debug.Log("Back to menu");
         SceneManager.LoadScene(menuScene.name);
-
     }
 
     public void Replay()
@@ -60,8 +75,6 @@ public class GameOverController : MonoBehaviour
         Debug.Log("Replay actual game");
 
         string currentSceneName = SceneManager.GetActiveScene().name;
-
         SceneManager.LoadScene(currentSceneName);
     }
-
 }
