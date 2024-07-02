@@ -14,7 +14,6 @@ public class AnimateBall : MonoBehaviour
 
     private void SetBallPosition()
     {
-        Debug.Log(GetComponent<RectTransform>().anchoredPosition);
         float newValue;
         if (scrollRef.value < 0)
         {
