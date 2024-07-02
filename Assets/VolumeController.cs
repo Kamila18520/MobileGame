@@ -6,6 +6,11 @@ using UnityEngine.Audio;
 public class VolumeController : MonoBehaviour
 {
     public AudioMixer mixerRef;
+
+    private void Start()
+    {
+        Application.targetFrameRate = 120;
+    }
     public void ToggleSFX()
     {
         mixerRef.GetFloat("SFX", out float currentValue);

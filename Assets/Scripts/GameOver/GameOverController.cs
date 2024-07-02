@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour
 {
-    [SerializeField] UnityEngine.Object menuScene;
+    //[SerializeField] UnityEngine.Object menuScene;
     [Header("Panel scores")]
     [SerializeField] TextMeshProUGUI actualScore;
     [SerializeField] TextMeshProUGUI maxScore;
@@ -67,7 +63,7 @@ public class GameOverController : MonoBehaviour
     public void BackToMenu()
     {
         Debug.Log("Back to menu");
-        SceneManager.LoadScene(menuScene.name);
+        SceneManager.LoadScene("Menu");
     }
 
     public void Replay()

@@ -27,23 +27,23 @@ public class ChooseLevel : MonoBehaviour
     }
 
 
-    void LoadScene(UnityEngine.Object scene, PanelAnim panelAnim)
+    void LoadScene(string scene, PanelAnim panelAnim)
     {
         if (!pressedCard)
         {
             panelAnim.EntryAnimationPanel();
             pressedCard = true;
-            Debug.Log("Load scene: " + scene.name);
+            Debug.Log("Load scene: " + scene);
             StartCoroutine(Wait(scene));
 
         }
 
     }
 
-    IEnumerator Wait(UnityEngine.Object scene)
+    IEnumerator Wait(string scene)
     {
         yield return new WaitForSeconds(panelAnimDuration);
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(scene);
     }
 
 }
@@ -56,10 +56,6 @@ public class SceneLoader
     public PanelAnim panelAnim;
     public string Discipline;
     public string CreatedBy;
-    public UnityEngine.Object Scene;
+    public string Scene;
     public Button Button; 
-
-    
-
-
 }
