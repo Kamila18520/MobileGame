@@ -11,7 +11,7 @@ public class InstructionController : MonoBehaviour
     [SerializeField] UnityEvent stopSctipts;
     [SerializeField] UnityEvent startScripts;
 
-    private void Awake()
+    private void Start()
     {
         
         bool isFirstTime = instructionVariable.FirstGame;
@@ -23,8 +23,8 @@ public class InstructionController : MonoBehaviour
         }
         else 
         {
+            startScripts.Invoke();
             Destroy(gameObject);
-        
         }
 
 

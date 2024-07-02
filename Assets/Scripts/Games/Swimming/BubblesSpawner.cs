@@ -32,12 +32,11 @@ public class BubblesSpawner : MonoBehaviour
 
     [SerializeField] private Vector2 spawnPosition;
 
-    private void Awake()
+    private void OnEnable()
     {
         actualSpeed = minSpeed;
         spawnPanelHeight = gameObject.GetComponent<RectTransform>().rect.height;
         spawnPanelWidth = gameObject.GetComponent<RectTransform>().rect.width;
-
         StartCoroutine(Spawner());
     }
 
