@@ -20,11 +20,19 @@ public class Test : MonoBehaviour
         if(timerRef.IsIndicatorInRange())
         {
             controllerRef.GoodJump();
+            timerRef.ButtonPressed();
+            DisableButton();
         }
         else
         {
             controllerRef.BadJump();
+            timerRef.ButtonPressed();
+            DisableButton();
         }
     }
 
+    public void DisableButton()
+    {
+        gameObject.SetActive(false);
+    }
 }

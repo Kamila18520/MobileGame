@@ -13,8 +13,8 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerText; 
     public float startTime = 60f; 
 
-    private float currentTime; 
-
+    private float currentTime;
+    private bool stopped;
     public UnityEvent OnTimeEnd;
 
     private void Start()
@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
 
     private IEnumerator StartTimer()
     {
-        while (currentTime > 0)
+        while (currentTime > 0 && !stopped)
         {
             currentTime -= Time.deltaTime;
             timerScrollbar.size = currentTime / startTime;
@@ -43,6 +43,11 @@ public class Timer : MonoBehaviour
             }
 
             yield return null;
+        }
+
+        if (stopped)
+        {
+            yield break;
         }
 
         currentTime = 0;
@@ -59,5 +64,15 @@ public class Timer : MonoBehaviour
     private void OnTimerEnd()
     {
         OnTimeEnd.Invoke();
+    }
+
+    public void FreezeTimer()
+    {
+        stopped = true;
+    }
+
+    public float GetCurrentTime()
+    {
+        return currentTime;
     }
 }
