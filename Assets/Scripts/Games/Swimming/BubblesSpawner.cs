@@ -28,13 +28,15 @@ public class BubblesSpawner : MonoBehaviour
     [SerializeField] float spawnPanelHeight;
     [SerializeField] float spawnPanelWidth;
 
+    [Header("Test")]
 
-    private void Awake()
+    [SerializeField] private Vector2 spawnPosition;
+
+    private void OnEnable()
     {
         actualSpeed = minSpeed;
         spawnPanelHeight = gameObject.GetComponent<RectTransform>().rect.height;
         spawnPanelWidth = gameObject.GetComponent<RectTransform>().rect.width;
-
         StartCoroutine(Spawner());
     }
 
@@ -72,7 +74,9 @@ public class BubblesSpawner : MonoBehaviour
         float randomX = UnityEngine.Random.Range(-spawnPanelWidth/2, spawnPanelWidth / 2);
         float randomY = UnityEngine.Random.Range(-spawnPanelHeight/2, spawnPanelHeight /2);
 
-        bubbleCopy.GetComponent<RectTransform>().anchoredPosition = new Vector2(randomX, randomY);
+        spawnPosition = new Vector2(randomX, randomY);
+
+        bubbleCopy.GetComponent<RectTransform>().anchoredPosition = spawnPosition;
     }
 
 
