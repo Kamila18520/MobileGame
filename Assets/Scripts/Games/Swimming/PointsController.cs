@@ -49,6 +49,7 @@ public class PointsController : MonoBehaviour
         PercentOfTimeToMaxSpeed();
         float floatValue = percent * 100f;
         points = Mathf.RoundToInt(actualTime + (pointsMultiplier * floatValue));
+        IncrementPoints(points);
     }
     public void PercentOfTimeToMaxSpeed()
     {

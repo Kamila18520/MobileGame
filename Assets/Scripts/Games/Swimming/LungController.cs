@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class LungController : MonoBehaviour
 
     [Header("Lungs")]
     [SerializeField] GameObject[] lungs = new GameObject[2];
+    [SerializeField] TextMeshProUGUI lungPercentTMP;
     [Header("Lung size")]
     [SerializeField] float maxLungSize = 1.0f;
     [SerializeField] float minLungSize = 0.85f;
@@ -38,13 +40,15 @@ public class LungController : MonoBehaviour
     {
         percent = pointsController.percent;
 
-
         lungsValue = lungs[0].GetComponent<Slider>().value;
+
+        float tmpValue = lungsValue * 100;
+        int intValue = (int)tmpValue;
+        lungPercentTMP.text = intValue.ToString()+"%";
 
         if (exhaust) 
         {
             LugnsSize(0);
-            LugnsSize(1);
 
         }
 
@@ -53,6 +57,8 @@ public class LungController : MonoBehaviour
 
     private void LugnsSize(int number)
     {
+
+
         if(actualSpeed > maxSpeed)
         actualSpeed = maxSpeed + ((minSpeed - maxSpeed) * (1 - percent));
         else actualSpeed = maxSpeed;
@@ -61,6 +67,8 @@ public class LungController : MonoBehaviour
         lungs[number].GetComponent<Slider>().value -= Time.deltaTime / actualSpeed;
         GameOverCheck(lungs[number].GetComponent<Slider>().value);
         lungs[number].transform.localScale = Vector3.one * (minLungSize + (lungsValue * (maxLungSize - minLungSize)));
+
+
 
 
     }
@@ -81,12 +89,11 @@ public class LungController : MonoBehaviour
     {
         exhaust = false;
 
-        for (int i = 0; i < 2; i++)
-        {
-            LugnsSize(i);
-            Breath(i);
 
-        }
+            LugnsSize(0);
+            Breath(0);
+
+        
 
 
         yield return new WaitForSeconds(0.2f);
