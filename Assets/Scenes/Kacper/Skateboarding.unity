@@ -980,7 +980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerScrollbar: {fileID: 717295109}
   timerText: {fileID: 1254314634}
-  startTime: 10
+  startTime: 30
   OnTimeEnd:
     m_PersistentCalls:
       m_Calls:

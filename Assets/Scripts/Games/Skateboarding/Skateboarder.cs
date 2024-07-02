@@ -75,7 +75,7 @@ public class Skateboarder : MonoBehaviour
     {
         currentSpeed = 0f;
         flips++;
-        controllerRef.IncrementPoints(flips);
+        controllerRef.IncrementPoints(1);
 
         if(flips > gamePointsHolder.maxScore)
         {
