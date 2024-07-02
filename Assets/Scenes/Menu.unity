@@ -1106,6 +1106,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2198033464786088775, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: value
+      value: ' pkt'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198033464786088775, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: GamePointsHolder
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b52b8157b59b3b4bbf1b61bf128c0e6, type: 2}
     - target: {fileID: 2633949308779064563, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1214,6 +1222,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.9811321
       objectReference: {fileID: 0}
+    - target: {fileID: 3535206250166459043, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: value
+      value: ' pkt'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535206250166459043, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: GamePointsHolder
+      value: 
+      objectReference: {fileID: 11400000, guid: 2a6b45d374d6cba479ab1fce8c610901, type: 2}
     - target: {fileID: 3590134673872541429, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: levelsHandler.Array.size
       value: 7
@@ -1350,6 +1366,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3662059857654765039, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: value
+      value: ' s'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662059857654765039, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: GamePointsHolder
+      value: 
+      objectReference: {fileID: 11400000, guid: 7655058ba718c904d921d6eb8e141ddd, type: 2}
     - target: {fileID: 3693516553232514367, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1592,7 +1616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5338079155965951664, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5449346145100815453, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1634,6 +1658,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5755227325851131069, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: value
+      value: ' pkt'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755227325851131069, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: GamePointsHolder
+      value: 
+      objectReference: {fileID: 11400000, guid: 74ffed05a592b1f41a20f4aff21941ea, type: 2}
     - target: {fileID: 5766590836513020446, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -80
@@ -1746,6 +1778,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6106539657417676802, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6343023542427296871, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1798,6 +1834,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6806096827616292817, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: value
+      value: ' s'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806096827616292817, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
+      propertyPath: GamePointsHolder
+      value: 
+      objectReference: {fileID: 11400000, guid: d352772b4acafd346a6bd26a498575f4, type: 2}
     - target: {fileID: 6823441103022654137, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: m_fontSize
       value: 24
@@ -2036,7 +2080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8294785616348128147, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: value
-      value: ' pkt.'
+      value: ' pkt'
       objectReference: {fileID: 0}
     - target: {fileID: 8294785616348128147, guid: 7f7802fa9c021d3419e3c3eebfd5808f, type: 3}
       propertyPath: GamePointsHolder
