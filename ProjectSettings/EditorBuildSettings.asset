@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Kamila/Shot throw.unity
     guid: c691389f16535944e9b01f0863c56667
   - enabled: 1
-    path: Assets/Scenes/Golf.unity
+    path: Assets/Scenes/Filip/Golf.unity
     guid: 30c2607687fec1849b5c538e6c939f0d
   - enabled: 1
     path: Assets/Scenes/Kamila/Swimming.unity

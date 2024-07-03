@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     private void ReturnToMenu()
     {
-        SceneManager.LoadScene("MenuScene"); // Za³aduj scenê menu, upewnij siê, ¿e taka scena istnieje
+        SceneManager.LoadScene("Menu"); // Za³aduj scenê menu, upewnij siê, ¿e taka scena istnieje
     }
 }
 
